@@ -1,0 +1,303 @@
+/* ==========================================================
+   L'ETOILE BISTRO — STAFF DESIGNER WHITE & ESPRESSO THEME
+   ========================================================== */
+
+.root {
+    -fx-font-family: "Segoe UI", "Inter", system-ui, sans-serif;
+    -fx-background-color: #FFFFFF;
+}
+
+/* Clean ScrollPane (invisible borders, minimal thin scrollbar) */
+.clean-scroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+    -fx-border-color: transparent;
+}
+.clean-scroll > .viewport {
+    -fx-background-color: transparent;
+}
+.scroll-bar:vertical, .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+    -fx-pref-width: 7px;
+    -fx-pref-height: 7px;
+}
+.scroll-bar .thumb {
+    -fx-background-color: #DFDCD6;
+    -fx-background-radius: 10px;
+}
+.scroll-bar .thumb:hover {
+    -fx-background-color: #C2BCB2;
+}
+.scroll-bar .increment-button, .scroll-bar .decrement-button {
+    -fx-padding: 0;
+    -fx-pref-height: 0;
+    -fx-pref-width: 0;
+    -fx-opacity: 0;
+}
+
+/* Typography */
+.brand-title {
+    -fx-font-family: "Georgia", "Times New Roman", serif;
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #181615;
+}
+.section-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #181615;
+}
+.muted-text {
+    -fx-font-size: 13px;
+    -fx-text-fill: #78716C;
+}
+.micro-caps {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #8C857E;
+}
+
+/* Search Input */
+.search-field {
+    -fx-background-color: #F6F5F2;
+    -fx-background-radius: 22px;
+    -fx-border-color: #EBE8E2;
+    -fx-border-radius: 22px;
+    -fx-border-width: 1px;
+    -fx-padding: 10px 18px;
+    -fx-font-size: 13px;
+    -fx-text-fill: #181615;
+    -fx-prompt-text-fill: #9A938C;
+}
+.search-field:focused {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #4A2E1B;
+    -fx-border-width: 1.5px;
+}
+
+/* Category Squircles */
+.category-tile {
+    -fx-background-color: #F7F6F3;
+    -fx-background-radius: 18px;
+    -fx-border-color: transparent;
+    -fx-border-radius: 18px;
+    -fx-border-width: 1.5px;
+    -fx-cursor: hand;
+}
+.category-tile:hover {
+    -fx-background-color: #F1EFEA;
+}
+.category-tile-active {
+    -fx-background-color: #F5EFEA;
+    -fx-background-radius: 18px;
+    -fx-border-color: #4A2E1B;
+    -fx-border-radius: 18px;
+    -fx-border-width: 1.5px;
+    -fx-cursor: hand;
+}
+
+/* Filter & Dietary Pills */
+.pill-btn {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #E5E2DC;
+    -fx-border-width: 1px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-padding: 7px 16px;
+    -fx-font-size: 12.5px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #44403C;
+    -fx-cursor: hand;
+}
+.pill-btn:hover {
+    -fx-background-color: #FAF9F7;
+    -fx-border-color: #C7C1B8;
+}
+.pill-btn-active {
+    -fx-background-color: #4A2E1B;
+    -fx-border-color: #4A2E1B;
+    -fx-border-width: 1px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-padding: 7px 16px;
+    -fx-font-size: 12.5px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+    -fx-cursor: hand;
+}
+
+/* Card / List Segmented Switcher */
+.segment-container {
+    -fx-background-color: #F4F3EF;
+    -fx-background-radius: 20px;
+    -fx-padding: 3px;
+}
+.segment-btn {
+    -fx-background-color: transparent;
+    -fx-background-radius: 16px;
+    -fx-padding: 5px 14px;
+    -fx-font-size: 12px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #78716C;
+    -fx-cursor: hand;
+}
+.segment-btn-active {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 16px;
+    -fx-padding: 5px 14px;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #181615;
+    -fx-effect: dropshadow(gaussian, rgba(24,22,21,0.08), 6, 0, 0, 1);
+    -fx-cursor: hand;
+}
+
+/* Dish Cards (White canvas + subtle hairline border) */
+.dish-card {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 18px;
+    -fx-border-color: #ECEAE5;
+    -fx-border-radius: 18px;
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(gaussian, rgba(24,22,21,0.04), 10, 0, 0, 3);
+    -fx-cursor: hand;
+}
+.dish-card:hover {
+    -fx-border-color: #C9BEB3;
+    -fx-effect: dropshadow(gaussian, rgba(74,46,27,0.12), 18, 0, 0, 6);
+}
+
+/* Badge over food photo */
+.photo-badge {
+    -fx-background-color: rgba(255, 255, 255, 0.96);
+    -fx-background-radius: 14px;
+    -fx-padding: 4px 10px;
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #181615;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 6, 0, 0, 2);
+}
+
+/* Primary Espresso Button */
+.espresso-btn {
+    -fx-background-color: #4A2E1B;
+    -fx-background-radius: 26px;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14.5px;
+    -fx-font-weight: bold;
+    -fx-padding: 14px 22px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(74,46,27,0.22), 12, 0, 0, 4);
+}
+.espresso-btn:hover {
+    -fx-background-color: #362012;
+}
+.espresso-btn:disabled {
+    -fx-background-color: #D8D3CC;
+    -fx-text-fill: #8C857E;
+    -fx-effect: none;
+}
+
+/* Secondary Outlined Button */
+.outline-btn {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #DCD8D0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 22px;
+    -fx-background-radius: 22px;
+    -fx-text-fill: #181615;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 18px;
+    -fx-cursor: hand;
+}
+.outline-btn:hover {
+    -fx-background-color: #FAF9F7;
+    -fx-border-color: #4A2E1B;
+}
+
+/* Two-Line Selector Box (Staff Designer Pattern) */
+.selector-box {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #E5E2DC;
+    -fx-border-width: 1px;
+    -fx-border-radius: 13px;
+    -fx-background-radius: 13px;
+    -fx-padding: 10px 8px;
+    -fx-cursor: hand;
+}
+.selector-box:hover {
+    -fx-border-color: #B8ADA2;
+}
+.selector-box-active {
+    -fx-background-color: #FAF6F2;
+    -fx-border-color: #4A2E1B;
+    -fx-border-width: 1.8px;
+    -fx-border-radius: 13px;
+    -fx-background-radius: 13px;
+    -fx-padding: 10px 8px;
+    -fx-cursor: hand;
+}
+
+/* Persistent Cart Sidebar */
+.cart-sidebar {
+    -fx-background-color: #FAF9F7;
+    -fx-border-color: #ECEAE5;
+    -fx-border-width: 0 0 0 1px;
+}
+.cart-card {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 15px;
+    -fx-border-color: #ECEAE5;
+    -fx-border-radius: 15px;
+    -fx-border-width: 1px;
+    -fx-padding: 13px;
+}
+
+/* Slide-Over Drawer */
+.drawer-sheet {
+    -fx-background-color: #FFFFFF;
+    -fx-effect: dropshadow(gaussian, rgba(24,22,21,0.22), 34, 0, -8, 0);
+}
+
+/* Modifier Tag */
+.mod-chip {
+    -fx-background-color: #F5F4F0;
+    -fx-background-radius: 8px;
+    -fx-padding: 3px 8px;
+    -fx-font-size: 11px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #57534E;
+}
+
+/* Minimal ComboBox */
+.table-picker {
+    -fx-background-color: #F4F2EE;
+    -fx-background-radius: 18px;
+    -fx-border-color: transparent;
+    -fx-font-size: 12.5px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+/* Toast Banner */
+.toast-pill {
+    -fx-background-color: #1C1917;
+    -fx-background-radius: 24px;
+    -fx-padding: 12px 24px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 18, 0, 0, 6);
+}
+
+/* Slider Accent */
+.slider .track {
+    -fx-background-color: #E7E5E4;
+    -fx-pref-height: 4px;
+    -fx-background-radius: 4px;
+}
+.slider .thumb {
+    -fx-background-color: #4A2E1B;
+    -fx-pref-width: 18px;
+    -fx-pref-height: 18px;
+    -fx-background-radius: 18px;
+    -fx-effect: dropshadow(gaussian, rgba(74,46,27,0.3), 6, 0, 0, 2);
+}

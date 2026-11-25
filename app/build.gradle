@@ -1,0 +1,72 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.springframework.boot' version '3.4.0'
+    id 'io.spring.dependency-management' version '1.1.6'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
+}
+
+group = 'com.etoile'
+version = '1.0.0'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+javafx {
+    version = '21'
+    modules = ['javafx.controls', 'javafx.fxml', 'javafx.graphics']
+}
+
+dependencies {
+    // Spring Boot Web (REST API + Jackson JSON)
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    // Spring Data JPA + Embedded H2 Database (zero manual DB setup needed)
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    runtimeOnly 'com.h2database:h2'
+
+    // Real-time WebSocket communication (Tablet <-> Server <-> KDS)
+    implementation 'org.springframework.boot:spring-boot-starter-websocket'
+}
+
+springBoot {
+    mainClass = 'com.etoile.server.EtoileServerApplication'
+}
+
+application {
+    mainClass = 'com.etoile.server.EtoileServerApplication'
+}
+
+tasks.named('bootRun') {
+    mainClass = 'com.etoile.server.EtoileServerApplication'
+}
+
+tasks.register('runServer') {
+    group = 'etoile'
+    dependsOn 'bootRun'
+}
+
+tasks.register('runTablet', JavaExec) {
+    group = 'etoile'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'com.etoile.tablet.TabletLauncher'
+    if (project.hasProperty('serverHost')) {
+        systemProperty 'etoile.host', project.property('serverHost')
+    }
+}
+
+tasks.register('runKds', JavaExec) {
+    group = 'etoile'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'com.etoile.kds.KdsLauncher'
+    if (project.hasProperty('serverHost')) {
+        systemProperty 'etoile.host', project.property('serverHost')
+    }
+}

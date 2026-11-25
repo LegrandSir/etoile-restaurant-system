@@ -1,0 +1,12 @@
+.gradle/
+build/
+app/build/
+data/
+app/data/
+*.mv.db
+*.trace.db
+*.log
+.DS_Store
+.idea/
+*.iml
+nbproject/private/
